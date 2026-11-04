@@ -499,3 +499,11 @@ cat("\nIntegrated dataset saved successfully.\n")
 
 # Open the integrated dataset in RStudio
 View(integrated_data)
+
+
+# Export the cleaned and integrated dataset
+write_csv(
+  integrated_data,
+  "data/processed/integrated_crash_data.csv"
+)
+file.exists("data/processed/integrated_crash_data.csv")
